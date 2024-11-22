@@ -1,10 +1,14 @@
 namespace scene {
     
     export enum sizetype { width, height}
-
-    export const ARCADE_SCREEN_WIDTH = 160
-    export const ARCADE_SCREEN_HEIGHT = 120
     
+    export const srcw = 160; export const srch = 120;
+    
+    export namespace userconfig {
+        export const ARCADE_SCREEN_WIDTH = srcw
+        export const ARCADE_SCREEN_HEIGHT = srch
+    }
+
     /**
      * set screen size by
      * width value and height value
@@ -14,8 +18,9 @@ namespace scene {
     //%inlineInputMode=inline
     //%group="screen size"
     export function SrcSize (widthVal: number = undefined, heightVal: number = undefined) {
-        if (widthVal) { const ARCADE_SCREEN_WIDTH = widthVal }
-        if (heightVal) { const ARCADE_SCREEN_HEIGHT = heightVal }
+        if (widthVal) { const srcw = widthVal; }
+        if (heightVal) { const srch = heightVal; }
+        userconfig;
     }
 
     /**
