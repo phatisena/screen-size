@@ -14,7 +14,7 @@ namespace scene {
      * width value and height value
      */
     //%blockid=src_srcsize
-    //%block="set screen size at width: $wh height: $ht"
+    //%block="set screen size at width: $widthVal height: $heightVal"
     //%inlineInputMode=inline
     //%group="screen size"
     export function SrcSize (widthVal: number = undefined, heightVal: number = undefined) {
