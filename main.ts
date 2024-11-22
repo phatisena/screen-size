@@ -2,6 +2,10 @@ namespace scene {
     
     export enum lentype { width, height}
 
+    /**
+     * set screen size by
+     * @param :width @param :height
+     */
     //%blockid=src_srcsize
     //%block="set screen size at width: $wh height: $ht"
     //%inlineInputMode=inline
@@ -11,6 +15,10 @@ namespace scene {
         if (ht) { const ARCADE_SCREEN_HEIGHT = ht }
     }
 
+    /**
+     * set screen size
+     * from @param by @param
+     */
     //%blockid=src_srconesize
     //%block="set screen $t by $val"
     //%inlineInputMode=inline
@@ -28,6 +36,10 @@ namespace scene {
         }
     }
 
+    /**
+     * set screen size from 
+     * tile size 4:3 by @param
+     */
     //%blockid=src_srcsizewithtile
     //%block="set tile size of screen (4:3) by $tsize"
     //%inlineInputMode=inline
@@ -36,6 +48,10 @@ namespace scene {
         if (tsize) {SrcSize(tsize * 4, tsize * 3)}
     }
 
+    /**
+     * set screen size and fit by @param
+     * for the tile size 4:3 by @param
+     */
     //%blockid=src_srcfitsize
     //%block="set screen fit size from $t by $val"
     //%inlineInputMode=inline
