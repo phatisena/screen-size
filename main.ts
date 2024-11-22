@@ -1,10 +1,10 @@
 namespace scene {
     
-    export enum lentype { width, height}
+    export enum sizetype { width, height}
 
     /**
      * set screen size by
-     * @param :width @param :height
+     * width value and height value
      */
     //%blockid=src_srcsize
     //%block="set screen size at width: $wh height: $ht"
@@ -17,18 +17,18 @@ namespace scene {
 
     /**
      * set screen size
-     * from @param by @param
+     * from sizetype by value
      */
     //%blockid=src_srconesize
     //%block="set screen $t by $val"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function SetSize (t: lentype, val: number = undefined) {
+    export function SetSize (t: sizetype, val: number = undefined) {
         switch (t) {
-            case lentype.width :
+            case sizetype.width :
             SrcSize(val,undefined)
             break;
-            case lentype.height :
+            case sizetype.height :
             SrcSize(undefined,val)
             break;
             default:
@@ -38,7 +38,7 @@ namespace scene {
 
     /**
      * set screen size from 
-     * tile size 4:3 by @param
+     * tile size from 4:3 by value
      */
     //%blockid=src_srcsizewithtile
     //%block="set tile size of screen (4:3) by $tsize"
@@ -49,22 +49,22 @@ namespace scene {
     }
 
     /**
-     * set screen size and fit by @param
-     * for the tile size 4:3 by @param
+     * set screen size and fit by sizetype
+     * for the tile size from 4:3 by value
      */
     //%blockid=src_srcfitsize
     //%block="set screen fit size from $t by $val"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function FitSize (t: lentype, val: number = undefined) {
+    export function FitSize (t: sizetype, val: number = undefined) {
         switch (t) {
-            case lentype.width:
+            case sizetype.width:
             if (val) {
                 const tsi = Math.floor(val / 4)
                 SrcSize(tsi * 4, tsi * 3)
             }
             break;
-            case lentype.height:
+            case sizetype.height:
             if (val) {
                 const tsi = Math.floor(val / 3)
                 SrcSize(tsi * 4, tsi * 3)
