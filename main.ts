@@ -1,4 +1,4 @@
-namespace sence {
+namespace scene {
     
     export enum lentype { width, height}
 
