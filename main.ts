@@ -32,7 +32,30 @@ namespace sence {
     //%block="set tile size of screen (4:3) by $tsize"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function SrcTileSize (tsize: number = undefined) {
+    export function TileSize (tsize: number = undefined) {
         if (tsize) {SrcSize(tsize * 4, tsize * 3)}
+    }
+
+    //%blockid=src_srcfitsize
+    //%block="set screen fit size from $t by $val"
+    //%inlineInputMode=inline
+    //%group="screen size"
+    export function FitSize (t: lentype, val: number = undefined) {
+        switch (t) {
+            case lentype.width:
+            if (val) {
+                const tsi = Math.floor(val / 4)
+                SrcSize(tsi * 4, tsi * 3)
+            }
+            break;
+            case lentype.height:
+            if (val) {
+                const tsi = Math.floor(val / 3)
+                SrcSize(tsi * 4, tsi * 3)
+            }
+            break;
+            default:
+            break;
+        }
     }
 }
