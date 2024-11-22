@@ -38,7 +38,7 @@ namespace scene {
 
     /**
      * set screen size from 
-     * tile size from 4:3 by value
+     * tile size of 4:3 by value
      */
     //%blockid=src_srcsizewithtile
     //%block="set tile size of screen (4:3) by $tsize"
@@ -50,7 +50,7 @@ namespace scene {
 
     /**
      * set screen size and fit by sizetype
-     * for the tile size from 4:3 by value
+     * for the tile size of 4:3 by value
      */
     //%blockid=src_srcfitsize
     //%block="set screen fit size from $t by $val"
