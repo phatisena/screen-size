@@ -10,9 +10,9 @@ namespace scene {
     //%block="set screen size at width: $wh height: $ht"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function SrcSize (wh: number = undefined, ht: number = undefined) {
-        if (wh) { const ARCADE_SCREEN_WIDTH = wh }
-        if (ht) { const ARCADE_SCREEN_HEIGHT = ht }
+    export function SrcSize (widthVal: number = undefined, heightVal: number = undefined) {
+        if (widthVal) { const ARCADE_SCREEN_WIDTH = widthVal }
+        if (heightVal) { const ARCADE_SCREEN_HEIGHT = heightVal }
     }
 
     /**
@@ -23,8 +23,8 @@ namespace scene {
     //%block="set screen $t by $val"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function SetSize (t: sizetype, val: number = undefined) {
-        switch (t) {
+    export function SetSize (sizet: sizetype, val: number = undefined) {
+        switch (sizet) {
             case sizetype.width :
             SrcSize(val,undefined)
             break;
@@ -44,8 +44,8 @@ namespace scene {
     //%block="set tile size of screen (4:3) by $tsize"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function TileSize (tsize: number = undefined) {
-        if (tsize) {SrcSize(tsize * 4, tsize * 3)}
+    export function TileSize (val: number = undefined) {
+        if (val) {SrcSize(val * 4, val * 3)}
     }
 
     /**
@@ -56,8 +56,8 @@ namespace scene {
     //%block="set screen fit size from $t by $val"
     //%inlineInputMode=inline
     //%group="screen size"
-    export function FitSize (t: sizetype, val: number = undefined) {
-        switch (t) {
+    export function FitSize (sizet: sizetype, val: number = undefined) {
+        switch (sizet) {
             case sizetype.width:
             if (val) {
                 const tsi = Math.floor(val / 4)
