@@ -28,7 +28,7 @@ namespace scene {
      * from sizetype by value
      */
     //%blockid=src_srconesize
-    //%block="set screen $t by $val"
+    //%block="set screen $sizet by $val"
     //%inlineInputMode=inline
     //%group="screen size"
     export function SetSize (sizet: sizetype, val: number = undefined) {
@@ -49,7 +49,7 @@ namespace scene {
      * tile size of 4:3 by value
      */
     //%blockid=src_srcsizewithtile
-    //%block="set tile size of screen (4:3) by $tsize"
+    //%block="set tile size of screen (4:3) by $val"
     //%inlineInputMode=inline
     //%group="screen size"
     export function TileSize (val: number = undefined) {
@@ -61,7 +61,7 @@ namespace scene {
      * for the tile size of 4:3 by value
      */
     //%blockid=src_srcfitsize
-    //%block="set screen fit size from $t by $val"
+    //%block="set screen fit size from $sizet by $val"
     //%inlineInputMode=inline
     //%group="screen size"
     export function FitSize (sizet: sizetype, val: number = undefined) {
