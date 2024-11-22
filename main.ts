@@ -2,6 +2,9 @@ namespace scene {
     
     export enum sizetype { width, height}
 
+    export const ARCADE_SCREEN_WIDTH = 160
+    export const ARCADE_SCREEN_HEIGHT = 120
+    
     /**
      * set screen size by
      * width value and height value
